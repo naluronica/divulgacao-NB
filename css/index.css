@@ -1,0 +1,114 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(./../imagens/fundo.jpg);
+    font-family: 'Karla', sans-serif;
+}
+
+.corpo-interno {   
+    background-color: white;
+    margin: 0 30px;
+    min-height: 100vh;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+.cabecalho img{
+    width: 50px;
+    height: auto;
+    border-radius: 100%;
+}
+
+.linha {
+    border: none;
+    height: 1px;
+    background-color: lightgray;
+    width: 95%; 
+    margin: 2px auto;
+}
+
+.menu-itms {
+    display: flex;
+    align-items: center; 
+    gap: 8px;
+    text-decoration: none; 
+    color: black;
+}
+
+.menu-itms:hover {
+    color: rgb(116, 159, 184);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.aboutme{
+    padding: 0px 50px;
+}
+
+.services{
+    padding: 0px 100px 10px;
+}
+
+.description{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    padding: 0px 20px;
+}
+
+.description img {
+    width: 120px;
+    height: auto;
+    border-radius: 100%;
+}
+
+.description-btt{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px
+}
+
+.description-btt {
+    display: flex;          /* Ativa o Flexbox */
+    align-items: center;    /* Alinha verticalmente ao centro */
+    gap: 50px          /* Adiciona um espaço entre os elementos */
+}
+
+.description-btt img {
+    width: 80px;
+    height: auto;
+}
+
+.botao {
+    display: inline-block;   /* Mantém o tamanho do botão correto */
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 20px;
+    font-weight: bold;       /* Melhora a aparência do texto */
+    font-size: 14px;         /* Ajusta o tamanho da fonte */
+    min-width: 160px;        /* Garante que o botão tenha um tamanho mínimo */
+}
+
+.botao:hover {
+    background-color: rgb(36, 36, 36);
+}
+
+.books{
+    padding: 0px 100px 20px;
+}
