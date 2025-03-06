@@ -1,114 +1,471 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-image: url(./../imagens/fundo.jpg);
-    font-family: 'Karla', sans-serif;
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
 }
 
-.corpo-interno {   
-    background-color: white;
-    margin: 0 30px;
-    min-height: 100vh;
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
 }
 
-.cabecalho{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding: 20px;
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
 }
 
-.cabecalho img{
-    width: 50px;
-    height: auto;
-    border-radius: 100%;
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
 }
 
-.linha {
-    border: none;
-    height: 1px;
-    background-color: lightgray;
-    width: 95%; 
-    margin: 2px auto;
+@media (min-width: 1000px){
+    .web{
+        display: block;
+    }
+    .mobile{
+        display: none;
+    }
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url(./../imagens/fundo.jpg);
+        font-family: 'Karla', sans-serif;
+    }
+    
+    .corpo-interno {   
+        background-color: white;
+        margin: 0 30px;
+        min-height: 100vh;
+    }
+    
+    @media (min-width: 1400px) {
+        .corpo-interno {
+            margin: 0 200px; 
+        }
+    }
+    
+    .copyright{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    .cabecalho{
+        display: flex;
+        justify-content: center;
+        gap: 2vw;
+        padding: 20px;
+    }
+    
+    .cabecalho img{
+        width: 50px;
+        height: auto;
+        border-radius: 100%;
+    }
+    
+    .linha {
+        border: none;
+        height: 1px;
+        background-color: lightgray;
+        width: 95%; 
+        margin: 2px auto;
+    }
+    
+    .menu-itms {
+        display: flex;
+        align-items: center; 
+        gap: 8px;
+        text-decoration: none; 
+        color: black;
+    }
+    
+    .menu-itms:hover {
+        color: rgb(116, 159, 184);
+    }
+    
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+    
+    .aboutme{
+        padding: 0px 50px;
+    }
+    
+    .services{
+        padding: 0px 100px 10px;
+    }
+    
+    .description{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 18px;
+        padding: 0px 20px;
+    }
+    
+    .description img {
+        width: 120px;
+        height: auto;
+        border-radius: 100%;
+    }
+    
+    .description-btt{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 50px
+    }
+    
+    .description-btt {
+        display: flex;
+        align-items: center;
+        gap: 50px
+    }
+    
+    .description-btt img {
+        width: 80px;
+        height: auto;
+    }
+    
+    .botao {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        border-radius: 5px;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 16px;
+        min-width: 160px;
+    }
+    
+    .botao:hover {
+        background-color: #222;
+    }
+    
+    .minha-escrita {
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;  
+        justify-content: center; 
+        align-items: center;     
+        width: 100%;            
+        padding: 0px 50px;         
+        box-sizing: border-box;  
+    }
+    
+    .exemplo{
+        font-style: italic;
+    }
+    
+    /*-----------------------------------------------------------------------*/
+    /*Lirvos*/
+    /*-----------------------------------------------------------------------*/
+    .books {
+        padding: 20px 100px;
+        text-align: center;
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .carousel {
+        display: flex;
+        width: 100%;
+        height: 500px;
+        position: relative;
+    }
+    
+    .slide {
+        display: none;
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 10px;
+        animation: fade 1s ease-in-out;
+    }
+    
+    /* Slide ativo */
+    .slide.active {
+        display: flex;
+    }
+    
+    /* Fundo degradê diferente para cada livro */
+    #teatro {
+        background: linear-gradient(180deg, #4d0d19, #921c44);
+    }
+    
+    #moonlight {
+        background: linear-gradient(180deg, #272b66, #7962dd);
+    }
+    
+    /* Estilo da informação dos livros */
+    .book-info {
+        flex: 1;
+        color: white;
+        text-align: left;
+    }
+    
+    .book-info h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .book-info p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .botao-carr {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 10px;
+        background: white;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    
+    .botao-carr:hover {
+        background: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* Estilo da imagem dos livros */
+    .book-img {
+        width: 300px;
+        height: auto;
+        transition: transform 2s ease-in-out;
+        animation: float 3s infinite ease-in-out;
+    }
+    
+    /* Animação para girar levemente */
+    @keyframes float {
+        0% { transform: rotate(0deg) translateY(0px); }
+        50% { transform: rotate(5deg) translateY(-5px); }
+        100% { transform: rotate(0deg) translateY(0px); }
+    }
+    
+    /* Fade-in para os slides */
+    @keyframes fade {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    /* Botões de navegação */
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.5);
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    
+    .prev:hover, .next:hover {
+        background: rgba(255, 255, 255, 0.8);
+    }    
+
+    @media (max-width: 768px) {
+        .book-info {
+            text-align: center;
+            max-width: 100%;
+        }
+    
+        .carousel {
+            flex-direction: column;
+            height: auto;
+        }
+    
+        .book-img {
+            width: 140px;
+            height: 210px;
+        }
+    }
 }
 
-.menu-itms {
-    display: flex;
-    align-items: center; 
-    gap: 8px;
-    text-decoration: none; 
-    color: black;
-}
+@media (max-width: 1000px){
+    .web{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
 
-.menu-itms:hover {
-    color: rgb(116, 159, 184);
-}
+    /* Garante que toda a página tenha um fundo escuro */
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./../imagens/fundo.jpg);
+        color: white;
+        font-family: 'Karla', sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 20px;
-}
+    /* Estrutura principal da página */
+    .mobile {
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
 
-.aboutme{
-    padding: 0px 50px;
-}
+    /* Caixa central do conteúdo */
+    .corpo {
+        width: 80%;
+        padding: 16px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
 
-.services{
-    padding: 0px 100px 10px;
-}
+    /* Nome e subtítulo */
+    .cabecalho h1 {
+        font-size: 20px;
+        margin: 10px 0;
+        font-weight: bold;
+    }
 
-.description{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    padding: 0px 20px;
-}
+    .cabecalho h2 {
+        font-size: 14px;
+        font-weight: normal;
+        opacity: 0.8;
+        margin-bottom: 20px;
+    }
 
-.description img {
-    width: 120px;
-    height: auto;
-    border-radius: 100%;
-}
+    /* Redes sociais */
+    .social-midia {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 15px 0;
+    }
 
-.description-btt{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-bottom: 50px
-}
+    .social-midia ion-icon {
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
 
-.description-btt {
-    display: flex;          /* Ativa o Flexbox */
-    align-items: center;    /* Alinha verticalmente ao centro */
-    gap: 50px          /* Adiciona um espaço entre os elementos */
-}
+    .social-midia ion-icon:hover {
+        transform: scale(1.2);
+    }
 
-.description-btt img {
-    width: 80px;
-    height: auto;
-}
+    /* Seção de livros (Minhas Obras) */
+    .merch h3 {
+        font-size: 18px;
+        margin: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
 
-.botao {
-    display: inline-block;   /* Mantém o tamanho do botão correto */
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    border-radius: 5px;
-    padding: 20px;
-    font-weight: bold;       /* Melhora a aparência do texto */
-    font-size: 14px;         /* Ajusta o tamanho da fonte */
-    min-width: 160px;        /* Garante que o botão tenha um tamanho mínimo */
-}
+    .merch {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    
+    /* Ajusta os blocos dos livros para ficarem mais visíveis */
+    .merch-itm {
+        width: 90px;
+        height: 110px;
+        background-color: rgba(255, 255, 255, 0.1); /* Fundo mais visível */
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.botao:hover {
-    background-color: rgb(36, 36, 36);
-}
+    /* Efeito de destaque ao passar o mouse */
+    .merch-itm:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
 
-.books{
-    padding: 0px 100px 20px;
+    /* Ajusta as imagens dos livros */
+    .merch-itm img {
+        width: 50px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Ajusta o nome dos livros */
+    .merch-itm a {
+        font-size: 14px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* Seção de serviços (Ghostwriting) */
+    .service {
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .service h3 {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .service p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Botão de chamada para ação */
+    .service a {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .service a:hover {
+        background-color: rgb(207, 207, 207);
+    }
+
+    /* Rodapé */
+    .copyright {
+        font-size: 13px;
+        margin-top: 20px;
+        opacity: 0.6;
+    }
+
+    .linha {
+        border: none;
+        height: 0.1px;
+        background-color: lightgray;
+        width: 95%; 
+        margin: 20px;
+    }
 }
