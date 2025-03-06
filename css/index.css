@@ -420,6 +420,10 @@
         text-decoration: none;
     }
 
+    .merch-itm p{
+        font-size: 12px;
+    }
+
     /* Seção de serviços (Ghostwriting) */
     .service {
         padding: 15px;
