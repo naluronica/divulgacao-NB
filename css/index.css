@@ -243,15 +243,20 @@
     }
     
     .book-info h3 {
-        font-size: 20px;
+        font-size: 24px;
         margin-bottom: 10px;
     }
     
     .book-info p {
-        font-size: 12px;
+        font-size: 16px;
         line-height: 1.5;
+        max-height: 200px; 
+        overflow-y: auto;
+        padding-right: 10px;
+        scrollbar-width: thin; 
+        scrollbar-color: white transparent;
     }
-    
+
     .botao-carr {
         display: inline-block;
         padding: 10px 20px;
