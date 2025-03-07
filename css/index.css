@@ -65,6 +65,34 @@
         border-radius: 100%;
     }
     
+
+    .social-midia {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 15px;
+    }
+
+    .social-midia img{
+        width: 22px;
+        height: auto;
+    }
+
+    .social-midia img:hover{
+        transform: scale(1.2);
+    }
+
+    .social-midia ion-icon {
+        font-size: 25px;
+        color: black;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .social-midia ion-icon:hover {
+        transform: scale(1.2);
+    }
+
     .linha {
         border: none;
         height: 1px;
@@ -89,7 +117,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        padding: 20px;
+        padding: 0px 20px;
     }
     
     .aboutme{
@@ -215,12 +243,12 @@
     }
     
     .book-info h3 {
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: 10px;
     }
     
     .book-info p {
-        font-size: 16px;
+        font-size: 12px;
         line-height: 1.5;
     }
     
@@ -356,8 +384,17 @@
         margin: 15px 0;
     }
 
+    .social-midia img{
+        width: 22px;
+        height: auto;
+    }
+
+    .social-midia img:hover{
+        transform: scale(1.2);
+    }
+
     .social-midia ion-icon {
-        font-size: 28px;
+        font-size: 25px;
         color: white;
         cursor: pointer;
         transition: transform 0.3s ease;
