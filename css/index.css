@@ -76,22 +76,26 @@
     .social-midia img{
         width: 22px;
         height: auto;
+        transition: transform 0.3s ease; 
+        display: inline-block;
     }
 
     .social-midia img:hover{
         transform: scale(1.2);
     }
 
-    .social-midia ion-icon {
-        font-size: 25px;
-        color: black;
-        cursor: pointer;
-        transition: transform 0.3s ease;
+    .social-midia i {
+        font-size: 25px; 
+        color: black;   
+        cursor: pointer; 
+        transition: transform 0.3s ease; 
+        display: inline-block;
     }
-
-    .social-midia ion-icon:hover {
-        transform: scale(1.2);
+    
+    .social-midia i:hover {
+        transform: scale(1.2); 
     }
+    
 
     .linha {
         border: none;
@@ -398,22 +402,26 @@
     .social-midia img{
         width: 22px;
         height: auto;
+        transition: transform 0.3s ease; 
+        display: inline-block;
     }
 
     .social-midia img:hover{
         transform: scale(1.2);
     }
 
-    .social-midia ion-icon {
+    .social-midia i {
         font-size: 25px;
-        color: white;
-        cursor: pointer;
-        transition: transform 0.3s ease;
+        color: black;
+        cursor: pointer; 
+        transition: transform 0.3s ease; 
+        display: inline-block;
     }
-
-    .social-midia ion-icon:hover {
-        transform: scale(1.2);
+    
+    .social-midia i:hover {
+        transform: scale(1.2); 
     }
+    
 
     /* Seção de livros (Minhas Obras) */
     .merch h3 {
