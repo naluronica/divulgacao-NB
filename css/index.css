@@ -381,6 +381,12 @@
         margin-bottom: 20px;
     }
 
+    .cabecalho img {
+        height: 170px;
+        width: auto;
+        border-radius: 100%;
+    }
+
     /* Redes sociais */
     .social-midia {
         display: flex;
